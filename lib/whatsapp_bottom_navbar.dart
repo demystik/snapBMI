@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:snapbmi/whatsapp_home_screen.dart';
+import 'package:snapbmi/whatsapp_update_screen.dart';
 
 class WhatsappBottomNavbar extends StatefulWidget {
   const WhatsappBottomNavbar({super.key});
@@ -10,21 +11,24 @@ class WhatsappBottomNavbar extends StatefulWidget {
 
 class _WhatsappBottomNavbarState extends State<WhatsappBottomNavbar> {
     int selectedIndex = 0;
-  @override
-  Widget build(BuildContext context) {
     void navigatorBottomBar(int index){
       setState(() {
         selectedIndex = index;
       });
     }
-    final List<Widget> _pages = [
+  @override
+  Widget build(BuildContext context) {
+    final List<Widget> pages = [
       WhatsappHomeScreen(),
-      const Scaffold(),
+      WhatsappUpdateScreen(),
       const Scaffold(),
       const Scaffold(),
     ];
     return Scaffold(
-      body: _pages[selectedIndex],
+      body: IndexedStack(
+        index: selectedIndex,
+        children: pages,
+      ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: selectedIndex,
