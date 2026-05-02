@@ -20,7 +20,7 @@ List<Chat> chats = [
         "https://png.pngtree.com/png-vector/20240528/ourmid/pngtree-a-woman-with-blonde-hair-and-blue-blazer-is-posing-for-png-image_12502841.png",
     message: "Have you gotten home?",
     time: "10:21 pm",
-    statusImage: "https://i.pinimg.com/originals/9d/f0/de/9df0de0b3c923911d7a2c010228724e6.jpg"
+    statusImage: "assets/images/s1.jpeg"
   ),
   Chat(
     name: "Aisha NYC",
@@ -28,7 +28,7 @@ List<Chat> chats = [
         "https://www.photopacks.ai/static/personas/examples/headshots_2.jpeg",
     message: "Don’t forget the meeting tomorrow",
     time: "9:10 pm",
-    statusImage: "https://wallpapercave.com/wp/cD5gD6f.jpg"
+    statusImage: "assets/images/s2.jpg"
   ),
   Chat(
     name: "David Coder",
@@ -36,7 +36,7 @@ List<Chat> chats = [
         "https://www.photopacks.ai/static/personas/examples/headshots_1.jpeg",
     message: "Voice call",
     time: "8:45 pm",
-    statusImage: ""
+    statusImage: "assets/images/s3.jpg"
   ),
   Chat(
     name: "Fatima Flight 💪🏻",
@@ -44,7 +44,7 @@ List<Chat> chats = [
         "https://www.photopacks.ai/static/personas/examples/headshots_3.jpeg",
     message: "I’m on my way",
     time: "8:30 pm",
-    statusImage: ""
+    statusImage: "assets/images/s4.jpg"
   ),
   Chat(
     name: "John 🌞",
@@ -52,7 +52,7 @@ List<Chat> chats = [
         "https://www.photopacks.ai/static/personas/examples/headshots_4.jpeg",
     message: "Nice work on the project",
     time: "7:50 pm",
-    statusImage: ""
+    statusImage: "assets/images/s5.jpg"
   ),
   Chat(
     name: "Grace Hotline",
@@ -60,7 +60,7 @@ List<Chat> chats = [
         "https://www.photopacks.ai/static/personas/examples/headshots_5.jpeg",
     message: "Can we talk later?",
     time: "7:10 pm",
-    statusImage: ""
+    statusImage: "assets/images/s6.jpg"
   ),
   Chat(
     name: "Ibrahim 😎",
@@ -68,7 +68,7 @@ List<Chat> chats = [
         "https://www.photopacks.ai/static/personas/examples/headshots_6.jpeg",
     message: "I’ll send it tonight",
     time: "6:45 pm",
-    statusImage: ""
+    statusImage: "assets/images/screen1.jpg"
   ),
   Chat(
     name: "Blessing",
@@ -76,7 +76,7 @@ List<Chat> chats = [
         "https://www.photopacks.ai/static/personas/examples/headshots_7.jpeg",
     message: "Thanks for your help!",
     time: "6:10 pm",
-    statusImage: ""
+    statusImage: "assets/images/screen2.png"
   ),
   Chat(
     name: "Samuel DVM",
@@ -84,7 +84,7 @@ List<Chat> chats = [
         "https://www.photopacks.ai/static/personas/examples/headshots_8.jpeg",
     message: "Are you coming to church?",
     time: "5:55 pm",
-    statusImage: ""
+    statusImage: "assets/images/screen4.png"
   ),
   Chat(
     name: "Zainab",
@@ -92,7 +92,7 @@ List<Chat> chats = [
         "https://www.photopacks.ai/static/personas/examples/headshots_9.jpeg",
     message: "Let’s meet at 4pm",
     time: "5:20 pm",
-    statusImage: ""
+    statusImage: "assets/images/screem3.png"
   ),
   Chat(
     name: "Michael",
@@ -100,7 +100,7 @@ List<Chat> chats = [
         "https://www.photopacks.ai/static/personas/examples/headshots_10.jpeg",
     message: "Check your email",
     time: "4:50 pm",
-    statusImage: ""
+    statusImage: "assets/images/screen4.png"
   ),
   Chat(
     name: "Hauwa",
@@ -108,7 +108,7 @@ List<Chat> chats = [
         "https://www.photopacks.ai/static/personas/examples/headshots_11.jpeg",
     message: "I’m busy right now",
     time: "4:15 pm",
-    statusImage: ""
+    statusImage: "assets/images/screen5.jpg"
   ),
   Chat(
     name: "Phone guy",

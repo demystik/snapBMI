@@ -81,20 +81,70 @@ class _WhatsappUpdateScreenState extends State<WhatsappUpdateScreen> {
           scrollDirection: Axis.horizontal,
           physics: AlwaysScrollableScrollPhysics(),
           child: Row(
-            children: List.generate(6, (index) {
+            children: List.generate(8, (index) {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  width: 100,
-                  height: 150,
-                  decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.circular(15),
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: NetworkImage(chats[index].statusImage),
+                child: Stack(
+                  children: [
+                    Container(
+                      width: 100,
+                      height: 170,
+                      decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(15),
+                        image: DecorationImage(
+                          opacity: 0.8,
+                          fit: BoxFit.cover,
+                          image: AssetImage(chats[index].statusImage),
+                        ),
+                      ),
                     ),
-                  ),
+
+                    Positioned(
+                      top: 5,
+                      left: 5,
+                      child: Container(
+                        height: 70,
+                        width: 70,
+                        padding: EdgeInsets.all(2),
+                        decoration: BoxDecoration(
+                          border: Border.all(width: 4, color: Colors.green),
+                          shape: BoxShape.circle,
+                        ),
+                        child: Container(
+                          height: 60,
+                          width: 60,
+                          decoration: BoxDecoration(
+                            // boxShadow: [
+                            //   BoxShadow(
+                            //     color: Colors.black12,
+                            //     offset: Offset(0, 5),
+                            //     spreadRadius: 15,
+                            //     blurRadius: 8
+                            //   ),
+                            // ],
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              image: NetworkImage(chats[index].image),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 10,
+                      left: 0,
+                      right: 0,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                        child: Text(chats[index].name, 
+                        textAlign: TextAlign.left,
+                        maxLines: 2, overflow: TextOverflow.ellipsis, style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: 1.1,
+                          color: Colors.white),),
+                      ),),
+                  ],
                 ),
               );
             }),
