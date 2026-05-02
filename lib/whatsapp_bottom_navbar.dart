@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snapbmi/whatsapp_communities.dart';
 import 'package:snapbmi/whatsapp_home_screen.dart';
 import 'package:snapbmi/whatsapp_update_screen.dart';
 
@@ -21,7 +22,7 @@ class _WhatsappBottomNavbarState extends State<WhatsappBottomNavbar> {
     final List<Widget> pages = [
       WhatsappHomeScreen(),
       WhatsappUpdateScreen(),
-      const Scaffold(),
+      WhatsappCommunities(),
       const Scaffold(),
     ];
     return Scaffold(

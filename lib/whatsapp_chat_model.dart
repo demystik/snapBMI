@@ -20,7 +20,7 @@ List<Chat> chats = [
         "https://png.pngtree.com/png-vector/20240528/ourmid/pngtree-a-woman-with-blonde-hair-and-blue-blazer-is-posing-for-png-image_12502841.png",
     message: "Have you gotten home?",
     time: "10:21 pm",
-    statusImage: "https://webneel.com/daily/sites/default/files/images/daily/05-2018/portrait-photography-by-dennis-drozhzhin.jpg"
+    statusImage: "https://i.pinimg.com/originals/9d/f0/de/9df0de0b3c923911d7a2c010228724e6.jpg"
   ),
   Chat(
     name: "Aisha NYC",
