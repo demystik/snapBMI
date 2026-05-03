@@ -1,3 +1,6 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/widgets.dart';
+
 class Chat {
   String name;
   String image;
@@ -133,5 +136,64 @@ List<Chat> chats = [
     message: "Done with the task",
     time: "1:15 pm",
     statusImage: ""
+  ),
+];
+
+
+class Groups {
+  String groupName;
+  String lastChatTime;
+  String lastMessage;
+  String groupImage;
+  Groups({
+    required this.groupName,
+    required this.lastChatTime,
+    required this.lastMessage,
+    required this.groupImage,
+  });
+}
+
+List<Groups> groupList = [
+  Groups(
+    groupName: "Flutter Devs",
+    lastChatTime: "10:30 AM",
+    lastMessage: "Check the new widget update",
+    groupImage: "assets/images/img1.jpeg",
+  ),
+  Groups(
+    groupName: "NYSC Batch C1",
+    lastChatTime: "9:15 AM",
+    lastMessage: "CDS tomorrow by 8am",
+    groupImage: "assets/images/img2.jpeg",
+  ),
+  Groups(
+    groupName: "Family",
+    lastChatTime: "Yesterday",
+    lastMessage: "Dinner is ready",
+    groupImage: "assets/images/img3.jpeg",
+  ),
+  Groups(
+    groupName: "UI/UX Designers",
+    lastChatTime: "Monday",
+    lastMessage: "New Figma file uploaded but did you guys checked the last one?",
+    groupImage: "assets/images/img4.jepg",
+  ),
+  Groups(
+    groupName: "Github Bounties ++",
+    lastChatTime: "01/05/2026",
+    lastMessage: "Github repositories to enhance your Python proficiency",
+    groupImage: "assets/images/img5.jpg",
+  ),
+  Groups(
+    groupName: "Zero Trust Hackers & CyberSecurities",
+    lastChatTime: "01/05/2026",
+    lastMessage: "Anthropic's cybersecurity AI was reportedly breached on launch day",
+    groupImage: "assets/images/img6.png",
+  ),
+  Groups(
+    groupName: "Programming and AI Recources",
+    lastChatTime: "28/04/2026",
+    lastMessage: "Today, let's understand another programming concept of Greedy Algorithm with others",
+    groupImage: "assets/images/img2.jpeg",
   ),
 ];

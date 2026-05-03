@@ -40,17 +40,51 @@ class _WhatsappUpdateScreenState extends State<WhatsappUpdateScreen> {
 
           Expanded(
             child: ListView.builder(
-              itemCount: chats.length,
+              itemCount: groupList.length + 1,
               itemBuilder: (context, index) {
                 if (index == 0) {
                   return updateUpperSection();
                 }
+                Groups groups = groupList[index - 1];
                 return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    width: 100,
-                    height: 100,
-                    color: Colors.green,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 8.0,
+                    vertical: 12,
+                  ),
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      radius: 25,
+                      foregroundImage: AssetImage(groups.groupImage),
+                    ),
+                    title: Text(
+                      groups.groupName,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    subtitle: Text(
+                      groups.lastMessage,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    trailing: [2, 4, 5].contains(index)
+                        ? Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Text(groups.lastChatTime),
+                              Container(
+                                padding: EdgeInsets.all(4),
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.green,
+                                ),
+                                child: Text(
+                                  '3',
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
+                            ],
+                          )
+                        : Text(groups.lastChatTime),
                   ),
                 );
               },
@@ -137,13 +171,19 @@ class _WhatsappUpdateScreenState extends State<WhatsappUpdateScreen> {
                       right: 0,
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 4.0),
-                        child: Text(chats[index].name, 
-                        textAlign: TextAlign.left,
-                        maxLines: 2, overflow: TextOverflow.ellipsis, style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          letterSpacing: 1.1,
-                          color: Colors.white),),
-                      ),),
+                        child: Text(
+                          chats[index].name,
+                          textAlign: TextAlign.left,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: 1.1,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               );
