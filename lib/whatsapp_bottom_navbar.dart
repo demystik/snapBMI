@@ -11,12 +11,13 @@ class WhatsappBottomNavbar extends StatefulWidget {
 }
 
 class _WhatsappBottomNavbarState extends State<WhatsappBottomNavbar> {
-    int selectedIndex = 0;
-    void navigatorBottomBar(int index){
-      setState(() {
-        selectedIndex = index;
-      });
-    }
+  int selectedIndex = 0;
+  void navigatorBottomBar(int index) {
+    setState(() {
+      selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final List<Widget> pages = [
@@ -26,22 +27,56 @@ class _WhatsappBottomNavbarState extends State<WhatsappBottomNavbar> {
       const Scaffold(),
     ];
     return Scaffold(
-      body: IndexedStack(
-        index: selectedIndex,
-        children: pages,
-      ),
+      body: IndexedStack(index: selectedIndex, children: pages),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: selectedIndex,
         onTap: navigatorBottomBar,
-        items: navBars),
+        items: navBars,
+      ),
     );
   }
 }
 
 List<BottomNavigationBarItem> navBars = [
-  BottomNavigationBarItem(icon: Icon(Icons.message_outlined), activeIcon: Icon(Icons.message_rounded), label: "Chats"),
-  BottomNavigationBarItem(icon: Icon(Icons.radio_button_checked_rounded), activeIcon: Icon(Icons.radio_button_unchecked), label: "Updates"),
-  BottomNavigationBarItem(icon: Icon(Icons.groups_2_outlined), activeIcon: Icon(Icons.groups_2), label: "Communities"),
-  BottomNavigationBarItem(icon: Icon(Icons.call_outlined), activeIcon: Icon(Icons.call), label: "Calls"),
+  BottomNavigationBarItem(
+    icon: Icon(Icons.message_outlined),
+    activeIcon: Container(
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(35),
+        color: Colors.green.shade100),
+      child: Icon(Icons.message_rounded)),
+    label: "Chats",
+  ),
+  BottomNavigationBarItem(
+    icon: Icon(Icons.radio_button_unchecked),
+    activeIcon: Container(
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(35),
+        color: Colors.green.shade100),
+      child: Icon(Icons.radio_button_checked_rounded)),
+    label: "Updates",
+  ),
+  BottomNavigationBarItem(
+    icon: Icon(Icons.groups_2_outlined),
+    activeIcon: Container(
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(35),
+        color: Colors.green.shade100),
+      child: Icon(Icons.groups_2)),
+    label: "Communities",
+  ),
+  BottomNavigationBarItem(
+    icon: Icon(Icons.call_outlined),
+    activeIcon: Container(
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(35),
+        color: Colors.green.shade100),
+      child: Icon(Icons.call)),
+    label: "Calls",
+  ),
 ];
